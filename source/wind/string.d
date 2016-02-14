@@ -1,8 +1,8 @@
 module wind.string;
 
+import core.stdc.wchar_;
 import std.string;
 import std.conv;
-import std.c.wcharh;
 import std.array;
 import std.algorithm;
 import wind.ut;
