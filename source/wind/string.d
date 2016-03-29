@@ -36,11 +36,11 @@ string stringFromCStringW(void* buffer)
     return to!string(str);
 }
 
-string hexDump(void* buffer, uint len)
+string hexDump(void* buffer, size_t len)
 {
     string ret;
     ubyte* p = cast(ubyte*)buffer;
-    for (uint i = 0; i < len; i++)
+    for (size_t i = 0; i < len; i++)
     {
         uint c = p[i];
         uint x = c / 16;
