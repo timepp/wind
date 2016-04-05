@@ -15,3 +15,7 @@ used to build into D application to bring modern Windows application behavior:
 2. new Windows common control looks
 3. windows explorer won't treat the app as old-style app to apply compatibility rules on it
 
+# unit test
+because `wind` is a library so you need to give special parameters when doing unittest:
+
+        wind\source\wind>rdmd -unittest -main -I.. keyboard.d
