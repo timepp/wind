@@ -39,7 +39,7 @@ string stringFromCStringW(void* buffer)
     return to!string(str);
 }
 
-string hexDump(immutable(void*) buffer, size_t len)
+string hexDump(const(void*) buffer, size_t len)
 {
     string ret;
     ubyte* p = cast(ubyte*)buffer;
