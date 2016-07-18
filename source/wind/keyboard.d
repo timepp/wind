@@ -2,7 +2,6 @@ module wind.keyboard;
 
 import core.sys.windows.windows;
 import std.array;
-import wind.ut;
 import std.conv;
 import std.algorithm;
 import std.string;
@@ -315,13 +314,13 @@ bool isModifier(ubyte vk)
 
 unittest
 {
-    assertEqual(GetVirtualKeyName(VK_RETURN), "RETURN");
+    assert(GetVirtualKeyName(VK_RETURN) == "RETURN");
     bool shifted;
-    assertEqual(GetVirtualKeyValue("BACK", shifted), VK_BACK);
-    assertEqual(shifted, false);
+    assert(GetVirtualKeyValue("BACK", shifted) == VK_BACK);
+    assert(shifted == false);
 
-    assertEqual(GetVirtualKeyValue("F", shifted), 'F');
-    assertEqual(shifted, true);
+    assert(GetVirtualKeyValue("F", shifted) == 'F');
+    assert(shifted == true);
 }
 
 /**
@@ -428,7 +427,7 @@ unittest
         stdout.flush();
 
         KeySequence seq = ParseKeySequence(c.s);
-        assertEqual(seq, c.expectedKeySequence);
+        assert(seq == c.expectedKeySequence);
     }
     writeln();
    
@@ -558,11 +557,11 @@ unittest
         write("  case:", i+1);
         stdout.flush();
         string r, comp;
-        assertEqual(ExtractComponent(c.str, r, comp), c.ret);
+        assert(ExtractComponent(c.str, r, comp) == c.ret);
         if (c.ret)
         {
-            assertEqual(r, c.remaining);
-            assertEqual(comp, c.component);
+            assert(r == c.remaining);
+            assert(comp == c.component);
         }
     }
     writeln();

@@ -5,7 +5,6 @@ import std.string;
 import std.conv;
 import std.array;
 import std.algorithm;
-import wind.ut;
 
 string splitHead(string str, char sep)
 {
@@ -57,7 +56,7 @@ string hexDump(const(void*) buffer, size_t len)
 
 unittest
 {
-    assertEqual(hexDump("\x00\x10\x7f\x80\xcc\xff".ptr, 6), "00 10 7F 80 CC FF ");
+    assert(hexDump("\x00\x10\x7f\x80\xcc\xff".ptr, 6) == "00 10 7F 80 CC FF ");
 }
 
 int getIndention(string str)
@@ -114,6 +113,6 @@ abcd
   efgh
  iikk
 `;
-    assertEqual(src.unindent(), dst);
+    assert(src.unindent() == dst);
 }
 
