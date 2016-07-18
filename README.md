@@ -9,10 +9,13 @@ small d wrapper functions, mainly for easier Windows development
 - stringFromCStringW: decode an UNICODE string buffer to string
 - hexDump: return the hex representation of a buffer
 - unindent: format text by removing leading spaces and indentations
+
 ## wind.keyboard
 windows key sequence parser
+
 ## wind.ui
 utilities to handle Windows rect
+
 ## binaries/windows_manifest_x86.res
 used to build into D application to bring modern Windows application behavior:
 1. high DPI awareness
