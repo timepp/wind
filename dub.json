@@ -1,0 +1,6 @@
+{
+    "name": "wind",
+    "description": "Small d wrapper functions, mainly for easier Windows development",
+    "copyright": "Copyright © 2015, idtong",
+    "authors": ["idtong"]
+}
